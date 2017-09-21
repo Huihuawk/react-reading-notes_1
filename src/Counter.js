@@ -2,7 +2,8 @@
  * Created by Wangke on 2017/9/20.
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 function Countent(props) {
   return <p>Countent组件的props.value：{props.value}</p>;

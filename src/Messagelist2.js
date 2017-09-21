@@ -1,7 +1,8 @@
 /**
  * Created by Wangke on 2017/9/21.
  */
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 function Button(props, context) {
   return <button style={{ backgroundColor: context.color }}>{props.children}</button>;
