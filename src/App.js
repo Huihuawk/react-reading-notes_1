@@ -4,6 +4,7 @@
 
 import React, { Component } from 'react';
 import Counter from './Counter';
+import Messagelist1 from './Messagelist1';
 
 // export default function App() {
 //   return <h1>hello world</h1>;
@@ -17,6 +18,7 @@ export default class App extends Component {
       <div>
         <h1>hello world</h1>
         <Counter />
+        <Messagelist1 />
       </div>
     );
   }
