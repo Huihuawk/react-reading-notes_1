@@ -9,7 +9,22 @@
 ### Messagelist1.js
 
 - 使用props传递数据。
+
 - 在消息列表组件中遍历生成消息组件，并向其传递了key,text,color等props。
-- 因为消息组件没有子元素，所以应该写成自闭合的形式。
+因为消息组件没有子元素，所以应该写成自闭合的形式。
+
 - 在消息组件中，渲染按钮组件，并向其传递了color。
+
 - 在按钮组件中，渲染了一个普通按钮，并声明式地定义了他的背景颜色为上级组件传来的color。
+
+### Messagelist2.js
+
+- 使用context传递数据。
+
+- 在消息列表组件中，遍历生成消息组件，并向其传递props。然后通过getchildcontext() 方法将color放在context中，并声明了childContextTypes。
+注意，如果不声明childContextTypes，将无法在组件中使用getChildContext()方法。
+
+- 在消息组件中渲染按钮组件，不再直接传递color。
+
+- 在按钮组件中，首先传递父组件的props和全局的context，然后渲染一个普通的按钮，并声明式地定义它的背景颜色为context.color。
+注意，如果没有定义contextTypes，context将是一个空对象。

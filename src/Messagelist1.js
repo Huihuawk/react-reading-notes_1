@@ -8,7 +8,7 @@ function Button(props) {
   return <button style={{ backgroundColor: props.color }}>{props.children}</button>;
 }
 
-Button.PropTypes = {
+Button.propTypes = {
   color: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
 };
@@ -21,13 +21,13 @@ function Message(props) {
   );
 }
 
-Message.PropTypes = {
+Message.propTypes = {
   text: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };
 
 function MessageList() {
-  const color = 'gray';
+  const color = '#ff7281';
   const messages = [
     { text: 'Text one' },
     { text: 'Text two' },
