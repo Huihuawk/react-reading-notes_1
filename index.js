@@ -2,12 +2,24 @@
  * Created by Wangke on 2017/9/19.
  */
 import React from 'react';
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import App from './src/App';
 
-const componentInstance = render((<App />), document.querySelector('#root'));
+console.log('首次挂载');
 
-console.log('组件、ReactElement、组件实例');
-console.log(App);
-console.log(<App />);
-console.log(componentInstance);
+let instance = render(<App />, document.getElementById('root'));
+
+window.renderComponent = () => {
+  console.log('挂载');
+  instance = render(<App />, document.getElementById('root'));
+};
+
+window.setState = () => {
+  console.log('更新');
+  instance.setState({ foo: 'bar' });
+};
+
+window.unmountComponentAtNode = () => {
+  console.log('卸载');
+  unmountComponentAtNode(document.getElementById('root'));
+};
